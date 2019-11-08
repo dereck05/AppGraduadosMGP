@@ -3,14 +3,11 @@
     package="com.example.sistemagraduadosmgp">
 
     <supports-screens
-
+        android:anyDensity="true"
         android:largeScreens="true"
         android:normalScreens="true"
-        android:xlargeScreens="true"
         android:smallScreens="true"
-        android:anyDensity="true"
-
-        />
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActualizarDatos"></activity>
+        <activity android:name=".MenuGraduado"></activity>
+        <activity android:name=".MenuConsultor" />
+        <activity android:name=".MenuAdmin" />
+        <activity android:name=".AdministrarUsuarios" />
+        <activity android:name=".ConsultarDatosActuales" />
+        <activity android:name=".ConsultarDatosGenerales" />
+        <activity android:name=".ActualizarDatos" />
         <activity android:name=".Registro" />
         <activity android:name=".MainActivity">
             <intent-filter>

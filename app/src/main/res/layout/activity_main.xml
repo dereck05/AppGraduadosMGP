@@ -26,7 +26,8 @@
         android:layout_marginStart="92dp"
         android:layout_marginLeft="92dp"
         android:layout_marginTop="460dp"
-        android:text="loginBtn"
+        android:text="Log In"
+        android:onClick="MenuAdmin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Log in" />
@@ -38,7 +39,7 @@
         android:layout_marginStart="228dp"
         android:layout_marginLeft="228dp"
         android:layout_marginTop="460dp"
-        android:text="registerBtn"
+        android:text="Registrarse"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Registrarse" />
