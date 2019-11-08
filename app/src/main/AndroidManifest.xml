@@ -24,6 +24,9 @@
         <activity android:name=".ConsultarDatosGenerales" />
         <activity android:name=".ActualizarDatos" />
         <activity android:name=".Registro" />
+        <activity android:name=".AgregarGraduado" />
+        <activity android:name=".ManejarCursos" />
+        <activity android:name=".RecuperarContrasena" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
