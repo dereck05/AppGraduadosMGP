@@ -3,9 +3,11 @@ package com.example.sistemagraduadosmgp;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -29,14 +31,32 @@ public class AdministrarUsuarios extends AppCompatActivity {
 
             // SET CONNECTIONSTRING
             Class.forName("net.sourceforge.jtds.jdbc.Driver").newInstance();
-            String username = "DB_A4CEA1_graduadosmgp_admin";
-            String password = "graduados19";
-            Connection DbConn = DriverManager.getConnection("jdbc:jtds:sqlserver://SQL5045.site4now.net/DB_A4CEA1_graduadosmgp;user=" + username + ";password=" + password);
+            String username = "plataformamgp_SQLLogin_1";
+            String password = "f29aa8wotf";
+            Connection dbConn = DriverManager.getConnection("jdbc:jtds:sqlserver://plataformamgp.mssql.somee.com/plataformamgp;user=" + username + ";password=" + password);
 
             Log.w("Connection","open");
-            Statement stmt = DbConn.createStatement();
+            // Create CallableStatement object.
+            String storedProcudureCall = "{call agregarAdminConsultor(?,?,?,?)};";
 
-            DbConn.close();
+            CallableStatement cStmt = dbConn.prepareCall(storedProcudureCall);
+
+            // Set input parameters value.
+            cStmt.setString(1, "dereckescalante@hotmail.com");
+
+            cStmt.setString(2, "hola");
+
+            cStmt.setInt(3, 0);
+            cStmt.setString(4, "administrador");
+            // Execute stored procedure.
+            boolean rs = cStmt.execute();
+
+            System.out.println("Agregado");
+
+            // Do not forget close Callabel Statement and db connection object.
+            cStmt.close();
+
+            dbConn.close();
 
         } catch (Exception e)
         {
