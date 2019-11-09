@@ -1,8 +1,11 @@
 package com.example.sistemagraduadosmgp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +27,17 @@ public class AdministrarUsuarios extends AppCompatActivity {
     private static String password = "graduados19";
 
 
-    public void connect(){
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        registrarAdmin();
+
+    }
+
+    public void registrarAdmin(){
         try {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
@@ -49,9 +62,8 @@ public class AdministrarUsuarios extends AppCompatActivity {
             cStmt.setInt(3, 0);
             cStmt.setString(4, "administrador");
             // Execute stored procedure.
-            boolean rs = cStmt.execute();
-
-            System.out.println("Agregado");
+            ResultSet res = cStmt.executeQuery();
+            System.out.println(res.getArray(0));
 
             // Do not forget close Callabel Statement and db connection object.
             cStmt.close();
@@ -60,17 +72,8 @@ public class AdministrarUsuarios extends AppCompatActivity {
 
         } catch (Exception e)
         {
-            Log.w("Error connection","" + e.getMessage());        }
-    }
-
-
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        connect();
+            Log.w("Error connection","" + e.getMessage());
+        }
     }
 
 
