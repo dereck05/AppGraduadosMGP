@@ -6,17 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".AdministrarUsuarios">
 
-    <EditText
-        android:id="@+id/email"
+    <Button
+        android:id="@+id/button13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginLeft="96dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="80dp"
+        android:text="Registrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Consultor" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="248dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="77dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginRight="86dp"
         android:ems="10"
+        android:hint="Correo"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwd" />
 
@@ -24,53 +37,49 @@
         android:id="@+id/passwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Administrar usuarios"
+        android:layout_marginTop="44dp"
+        android:text="Registrar usuario"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/Password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="256dp"
+        android:layout_height="49dp"
         android:layout_marginTop="60dp"
         android:ems="10"
+        android:hint="password"
         android:inputType="numberPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
-    <RadioGroup
-        android:id="@+id/opciones_user"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/Administrador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:checked="false"
+        android:text="Administrador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toEndOf="@+id/Consultor"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
-        <RadioButton
-            android:id="@+id/admint"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:checked="true"
-            android:text="Administrador" />
-
-        <RadioButton
-            android:id="@+id/adminbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:text="Consultor" />
-
-        <Button
-            android:id="@+id/button12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
-    </RadioGroup>
+    <RadioButton
+        android:id="@+id/Consultor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="80dp"
+        android:checked="true"
+        android:text="Consultor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
