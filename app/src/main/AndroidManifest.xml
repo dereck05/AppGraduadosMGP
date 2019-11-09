@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sistemagraduadosmgp">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
