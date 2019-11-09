@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sistemagraduadosmgp">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -24,6 +26,9 @@
         <activity android:name=".ConsultarDatosGenerales" />
         <activity android:name=".ActualizarDatos" />
         <activity android:name=".Registro" />
+        <activity android:name=".AgregarGraduado" />
+        <activity android:name=".ManejarCursos" />
+        <activity android:name=".RecuperarContrasena" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

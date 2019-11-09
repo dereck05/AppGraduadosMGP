@@ -13,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button loginButton = findViewById(R.id.Login);
+        Button loginButton = findViewById(R.id.btn_login);
+        Button reg = findViewById(R.id.btn_new_ac);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,5 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
             }}
         );
+
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Registro.class);
+                startActivity(intent);
+            }
+        });
     }
 }
