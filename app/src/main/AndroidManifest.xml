@@ -20,7 +20,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".registrarLlamada"></activity>
+        <activity android:name=".Login"></activity>
+        <activity android:name=".VerLlamadas" />
+        <activity android:name=".ManejarOfertaCursos" />
+        <activity android:name=".registrarLlamada" />
         <activity android:name=".MenuGraduado" />
         <activity android:name=".MenuConsultor" />
         <activity android:name=".MenuAdmin" />
