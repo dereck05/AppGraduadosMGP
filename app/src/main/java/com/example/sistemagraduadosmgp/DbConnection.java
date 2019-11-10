@@ -6,22 +6,21 @@ import java.sql.Connection;
 
 import java.sql.DriverManager;
 
-class DbConnection extends AsyncTask<Void, Integer, Boolean> {
+class DbConnection  {
 
-    Connection Overconn = null;
+    Connection conn = null;
 
-    @Override
-    protected Boolean doInBackground(Void... params) {
+
+    public Connection connect() {
         try {
-            String url = "jdbc:jtds:sqlserver://SQL5047.site4now.net/DB_A4FABB_sistemamgp;USER= DB_A4FABB_sistemamgp_admin;PASSWORD=plataforma19";
-            Log.i("url", url);
-            Class.forName( "net.sourceforge.jtds.jdbc.Driver").newInstance();
-            Connection conn = DriverManager.getConnection(url);
-            Overconn = conn;
-            if (conn == null)
+            Class.forName("net.sourceforge.jtds.jdbc.Driver").newInstance();
+            String username = "plataformamgp_SQLLogin_1";
+            String password = "f29aa8wotf";
+            Connection dbConn = DriverManager.getConnection("jdbc:jtds:sqlserver://plataformamgp.mssql.somee.com/plataformamgp;user=" + username + ";password=" + password);
+            conn = dbConn;
+            if (dbConn == null)
             {
-
-                return false;
+                return null;
             }
         } catch (NoClassDefFoundError e){
             Log.e("Definicion de clase",e.getMessage());
@@ -29,27 +28,11 @@ class DbConnection extends AsyncTask<Void, Integer, Boolean> {
             Log.e("Clase no encontrada",e.getMessage());
         } catch (Exception e) {
             Log.e("ERROR Conexion:",e.getMessage());
-            return false;
+            return null;
         }
-        return true;
-    }
-    @Override
-    protected void onPostExecute(Boolean resultado) {
-        if(resultado) {
-            Log.e("LOG:", "conectado");
-        }else {
-            Log.e("LOG:", "no conectado");
-        }
+        return conn;
     }
 
-    public Connection conected(){
-        if(Overconn == null){
-
-            doInBackground();
-        }
-        return Overconn;
-
-    }
 
 }
 
