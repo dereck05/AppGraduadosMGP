@@ -91,7 +91,7 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <EditText
-        android:id="@+id/txt_codigo"
+        android:id="@+id/txt_CoreoLogin"
         android:layout_width="228dp"
         android:layout_height="49dp"
         android:contentDescription="Correo"
@@ -204,7 +204,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_password"
+        app:layout_constraintTop_toBottomOf="@+id/txt_passwordLogin"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

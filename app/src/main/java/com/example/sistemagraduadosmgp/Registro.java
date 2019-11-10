@@ -27,7 +27,7 @@ public class Registro extends AppCompatActivity {
         setContentView(R.layout.activity_registro);
 
         correo = findViewById(R.id.txt_correo);
-        contra = findViewById(R.id.txt_password);
+        contra = findViewById(R.id.txt_passwordLogin);
 
         aceptar = findViewById(R.id.btn_crear);
 
