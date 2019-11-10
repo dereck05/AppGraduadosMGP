@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, AgregarGraduado.class);
+                Intent intent = new Intent(MainActivity.this, ConsultarDatosGenerales.class);
                 startActivity(intent);
 
             }}

@@ -12,44 +12,52 @@ import android.widget.Toast;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
-public class Registro extends AppCompatActivity {
 
-    EditText correo;
-    EditText id;
-    EditText contra;
-    Button aceptar;
+public class registrarLlamada extends AppCompatActivity {
+    EditText cedula;
+    EditText fecha;
+    EditText motivo;
+    EditText comentario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
+        setContentView(R.layout.activity_registrar_llamada);
 
-        correo = findViewById(R.id.txt_correo);
-        contra = findViewById(R.id.txt_password);
+        cedula = findViewById(R.id.txt_cedulaLlamada);
 
-        aceptar = findViewById(R.id.btn_crear);
+        motivo = findViewById(R.id.txt_MotivoLlamada);
+        comentario = findViewById(R.id.txt_ComentarioLlamada);
 
+        Button reg = findViewById(R.id.btn_regLlamada);
 
-        aceptar.setOnClickListener(new View.OnClickListener() {
+        reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(cedula.getText().toString().length() > 0 &&
 
-                if(correo.getText().toString().length() > 0 && contra.getText().toString().length() > 0){
+                motivo.getText().toString().length() > 0){
 
-                    Toast.makeText(getApplicationContext(),"Usuario registrado con exito",Toast.LENGTH_LONG).show();
-                    agregarUsuario();
+                    registrarllamada();
                 }
-                else {
+                else{
+
                     Toast.makeText(getApplicationContext(),"Hay un campo sin rellenar",Toast.LENGTH_LONG).show();
                 }
             }
         });
+
+
     }
 
 
-    public void agregarUsuario(){
+
+    public void registrarllamada(){
         try {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
@@ -62,14 +70,20 @@ public class Registro extends AppCompatActivity {
 
             Log.w("Connection","open");
             // Create CallableStatement object.
-            String storedProcudureCall = "{call registrarUsuario(?,?,?,?)};";
+            String storedProcudureCall = "{call registrarLlamadasp(?,?,?,?)};";
             CallableStatement cStmt = dbConn.prepareCall(storedProcudureCall);
 
             // Set input parameters value.
-            cStmt.setString(1, correo.getText().toString());
-            cStmt.setString(2, contra.getText().toString());
-            cStmt.setInt(3, 0);
-            cStmt.setString(4,"usuario");
+            float fCedula = Float.parseFloat(cedula.getText().toString());
+
+            Calendar calendar = Calendar.getInstance();
+            java.util.Date date = calendar.getTime();
+            java.sql.Date fFecha = new java.sql.Date(date.getTime());
+
+            cStmt.setFloat(1, fCedula);
+            cStmt.setString(2, motivo.getText().toString());
+            cStmt.setDate(3,  fFecha);
+            cStmt.setString(4,comentario.getText().toString());
             // Execute stored procedure.
             boolean rs = cStmt.execute();
 
@@ -85,4 +99,5 @@ public class Registro extends AppCompatActivity {
             Log.w("Error connection","" + e.getMessage());
         }
     }
+
 }
