@@ -8,7 +8,7 @@
 
 
     <EditText
-        android:id="@+id/txt_cedula"
+        android:id="@+id/txt_cedulaLlamada"
         android:layout_width="228dp"
         android:layout_height="49dp"
         android:contentDescription="Correo"
