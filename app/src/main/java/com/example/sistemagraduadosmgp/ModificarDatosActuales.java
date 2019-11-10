@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ConsultarDatosActuales extends AppCompatActivity {
+public class ModificarDatosActuales extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consultar_datos_actuales);
+        setContentView(R.layout.activity_modificar_datos_actuales);
     }
 }
