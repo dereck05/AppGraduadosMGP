@@ -1,13 +1,10 @@
 package com.example.sistemagraduadosmgp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -17,20 +14,9 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 
 public class AdministrarUsuarios extends AppCompatActivity {
-    private static final String LOG = "DEBUG";
-    private static String ip = "SQL5045.site4now.net";
-    private static String port = "1433";
-    private static String classs = "net.sourceforge.jtds.jdbc.Driver";
-    private static String db = "DB_A4CEA1_graduadosmgp";
-    private static String un = "DB_A4CEA1_graduadosmgp_admin";
-    private static String password = "graduados19";
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
