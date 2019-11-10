@@ -24,4 +24,8 @@ public class MenuAdmin extends AppCompatActivity {
             }
         });
     }
+
+    public void callConsultarDatos(View v){
+        startActivity(new Intent(MenuAdmin.this, ConsultarDatosGenerales.class));
+    }
 }
