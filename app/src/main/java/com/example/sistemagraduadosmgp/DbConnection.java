@@ -45,7 +45,7 @@ class DbConnection extends AsyncTask<Void, Integer, Boolean> {
     public Connection conected(){
         if(Overconn == null){
 
-            doInBackground();
+            //doInBackground();
         }
         return Overconn;
 
