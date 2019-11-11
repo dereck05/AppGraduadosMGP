@@ -69,12 +69,10 @@ public class ConsultarDatosGenerales extends AppCompatActivity {
             View tableRow = LayoutInflater.from(this).inflate(R.layout.table_row,cl,false);
             TextView carnet  = (TextView) tableRow.findViewById(R.id.carnet);
             TextView cedula  = (TextView) tableRow.findViewById(R.id.cedula);
-            TextView pasaporte  = (TextView) tableRow.findViewById(R.id.pasaporte);
             TextView nombre  = (TextView) tableRow.findViewById(R.id.nombre);
             TextView genero  = (TextView) tableRow.findViewById(R.id.genero);
             cedula.setText("Cedula");
             carnet.setText("Carnet");
-            pasaporte.setText("Pasaporte");
             nombre.setText("Nombre");
             genero.setText("Genero");
             tableLayout.addView(tableRow);
@@ -84,14 +82,12 @@ public class ConsultarDatosGenerales extends AppCompatActivity {
                 tableRow = LayoutInflater.from(this).inflate(R.layout.table_row,cl,false);
                 carnet  = (TextView) tableRow.findViewById(R.id.carnet);
                 cedula  = (TextView) tableRow.findViewById(R.id.cedula);
-                pasaporte  = (TextView) tableRow.findViewById(R.id.pasaporte);
                 nombre  = (TextView) tableRow.findViewById(R.id.nombre);
                 genero  = (TextView) tableRow.findViewById(R.id.genero);
                 cedula.setText(""+(int)res.getFloat(1));
                 carnet.setText(""+(int)res.getFloat(2));
-                pasaporte.setText(res.getString(3));
-                nombre.setText(res.getString(4));
-                genero.setText(res.getString(5));
+                nombre.setText(res.getString(3));
+                genero.setText(res.getString(4));
                 tableLayout.addView(tableRow);
 
             }

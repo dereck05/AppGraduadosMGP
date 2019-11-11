@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.273" />
 
     <EditText
-        android:id="@+id/txt_codigo"
+        android:id="@+id/txt_CoreoLogin"
         android:layout_width="294dp"
         android:layout_height="wrap_content"
         android:contentDescription="Correo"
@@ -54,7 +54,7 @@
 
 
     <EditText
-        android:id="@+id/txt_password"
+        android:id="@+id/txt_passwordLogin"
         android:layout_width="294dp"
         android:layout_height="wrap_content"
         android:ems="10"
