@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, ConsultarDatosGenerales.class);
+                Intent intent = new Intent(MainActivity.this, MenuAdmin.class);
                 startActivity(intent);
 
             }}
@@ -32,5 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }
