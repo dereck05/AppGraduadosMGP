@@ -120,8 +120,8 @@ public class ModificarDatosActuales extends AppCompatActivity {
             carnet.setText(Float.toString(pcarnet));
             genero.setText(pgenero);
             correo.setText(pcorreo);
-            telefono.setText(Float.toString(ptelefono));
-            celular.setText(Float.toString(pcelular));
+            telefono.setText(Float.toString((int)(ptelefono)));
+            celular.setText(Float.toString((int)(pcelular)));
             provincia.setText(pprovincia);
             canton.setText(pcanton);
             distrito.setText(pdistrito);
