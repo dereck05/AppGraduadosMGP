@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MenuConsultor extends AppCompatActivity {
 
     Button agregarllamada = findViewById(R.id.regLlamadaConsultor);
+    Button actulizarDatos = findViewById(R.id.button18);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,14 @@ public class MenuConsultor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuConsultor.this, registrarLlamada.class);
+                startActivity(intent);
+            }
+        });
+
+        actulizarDatos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuConsultor.this,ModificarDatosActuales.class);
                 startActivity(intent);
             }
         });

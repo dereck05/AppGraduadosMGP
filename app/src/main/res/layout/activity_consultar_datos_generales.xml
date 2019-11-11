@@ -105,20 +105,24 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="162dp"
             android:layout_marginRight="162dp"
+            android:layout_marginBottom="42dp"
             android:onClick="cargarTabla"
             android:text="Buscar"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
         <ScrollView
             android:id="@+id/scrollView2"
-            android:layout_width="422dp"
-            android:layout_height="355dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="434dp"
+            android:layout_height="262dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="42dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buscar">
 
@@ -137,8 +141,8 @@
 
                 <include
                     layout="@layout/table_row"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp" />
+                    android:layout_width="358dp"
+                    android:layout_height="match_parent" />
 
             </TableLayout>
 
