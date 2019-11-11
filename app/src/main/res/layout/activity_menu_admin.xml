@@ -6,100 +6,134 @@
     android:layout_height="match_parent"
     tools:context=".MenuAdmin">
 
-    <ScrollView
-        android:id="@+id/scrollView4"
-        android:layout_width="329dp"
-        android:layout_height="731dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginRight="37dp"
+    <Button
+        android:id="@+id/btnActualizarDatos"
+        android:layout_width="170dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginRight="59dp"
+        android:background="@drawable/gradient"
+        android:text="Actualizar Datos"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toStartOf="@+id/btnManejarCursos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnManejarCursos"
+        android:layout_width="153dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/gradient"
+        android:text="Manejar cursos"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/consultarDatosbtn"
+        android:layout_width="169dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:background="@drawable/gradient"
+        android:text="Consultar datos"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toStartOf="@+id/adminUserbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizarDatos" />
+
+    <Button
+        android:id="@+id/adminUserbtn"
+        android:layout_width="156dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/gradient"
+        android:text="Administrar usuarios"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnManejarCursos" />
+
+    <Button
+        android:id="@+id/btnManejarOfertasDeCurso"
+        android:layout_width="168dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        android:background="@drawable/gradient"
+        android:text="Manejar  cursos"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toStartOf="@+id/btnAgregarGraduado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consultarDatosbtn" />
+
+    <Button
+        android:id="@+id/btnAgregarGraduado"
+        android:layout_width="153dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/gradient"
+        android:text="Agregar graduado"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminUserbtn" />
+
+    <Button
+        android:id="@+id/regLlamadaAdmin"
+        android:layout_width="163dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="193dp"
+        android:background="@drawable/gradient"
+        android:text="Registrar llamada"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnVerLlamada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnManejarOfertasDeCurso" />
+
+    <Button
+        android:id="@+id/btnVerLlamada"
+        android:layout_width="158dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="194dp"
+        android:background="@drawable/gradient"
+        android:text="Ver llamada"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregarGraduado" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu Administrador"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Menu Administrador"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btnActualizarDatos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="92dp"
-                android:gravity="center"
-                android:text="Actualizar Datos" />
-
-            <Button
-                android:id="@+id/btnManejarCursos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:gravity="center"
-                android:text="Manejar cursos" />
-
-            <Button
-                android:id="@+id/consultarDatosbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:gravity="center"
-                android:text="Consultar datos" />
-
-            <Button
-                android:id="@+id/adminUserbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:gravity="center"
-                android:text="Administrar usuarios" />
-
-            <Button
-                android:id="@+id/btnManejarOfertasDeCurso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:gravity="center"
-                android:text="Manejar ofertas de curso" />
-
-            <Button
-                android:id="@+id/btnAgregarGraduado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:text="Agregar graduado" />
-
-            <Button
-                android:id="@+id/regLlamadaAdmin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:text="Registrar llamada" />
-
-            <Button
-                android:id="@+id/btnVerLlamada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:text="Ver llamada" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="180sp" />
-        </LinearLayout>
-    </ScrollView>
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
