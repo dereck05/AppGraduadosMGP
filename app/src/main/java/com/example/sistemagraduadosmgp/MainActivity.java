@@ -65,22 +65,23 @@ public class MainActivity extends AppCompatActivity {
                     usuario.getInstance().rol = rol;
                     usuario.getInstance().correo = correo.getText().toString();
 
-                    String storedProcudureCall2 = "{call iniciarSesion(?,?)};";
+                    String storedProcudureCall2 = "{call obtenerCedula(?)};";
                     CallableStatement cStmt2 = dbConn.prepareCall(storedProcudureCall2);
                     cStmt2.setString(1, correo.getText().toString());
 
                     res = cStmt2.executeQuery();
 
-                    String ced = null;
+                    float ced = 0;
                     while (res.next()) {
 
-                        ced = res.getString(1);
+                        ced = res.getFloat(1);
                     }
 
                     usuario.getInstance().cedula = ced;
 
 
                     cStmt.close();
+                    cStmt2.close();
 
                     dbConn.close();
 
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 if(!usuario.rol.equals("Invalido")){
-                    Intent intent = new Intent(MainActivity.this, ConsultarDatosGenerales.class);
+                    Intent intent = new Intent(MainActivity.this, ModificarDatosActuales.class);
                     startActivity(intent);
                 }
 
