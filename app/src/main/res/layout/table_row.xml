@@ -6,14 +6,14 @@
     android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/carnet"
+        android:id="@+id/cedula"
         android:layout_width="30dp"
         android:layout_height="match_parent"
         android:layout_weight="0.25"
         android:gravity="center" />
 
     <TextView
-        android:id="@+id/cedula"
+        android:id="@+id/carnet"
         android:layout_width="30dp"
         android:layout_height="match_parent"
         android:layout_weight="0.25"
