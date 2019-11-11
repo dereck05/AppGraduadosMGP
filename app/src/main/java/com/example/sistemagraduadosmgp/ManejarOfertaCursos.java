@@ -73,6 +73,7 @@ public class ManejarOfertaCursos extends AppCompatActivity {
                 indices.add(indice);
             }
 
+
             String[] array = data.toArray(new String[0]);
             ArrayAdapter NoCoreAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, data);
             NoCoreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -194,9 +195,13 @@ public class ManejarOfertaCursos extends AppCompatActivity {
 
             tableLayout.removeAllViews();
 
+
             ConstraintLayout cl = findViewById(R.id.main);
 
             View tableRow;
+
+            tableRow = LayoutInflater.from(this).inflate(R.layout.table_header_historial_ofertas,cl,false);
+            tableLayout.addView(tableRow);
 
             while (res.next()){
                 tableRow = LayoutInflater.from(this).inflate(R.layout.table_row_historial_ofertas,cl,false);
@@ -254,6 +259,9 @@ public class ManejarOfertaCursos extends AppCompatActivity {
             ConstraintLayout cl = findViewById(R.id.main);
 
             View tableRow;
+
+            tableRow = LayoutInflater.from(this).inflate(R.layout.table_header_interesados,cl,false);
+            tableLayout2.addView(tableRow);
 
             while (res.next()){
                 tableRow = LayoutInflater.from(this).inflate(R.layout.table_row_interesados,cl,false);
