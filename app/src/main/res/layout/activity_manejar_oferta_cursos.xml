@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ManejarOfertaCursos">
@@ -55,10 +56,11 @@
                 android:layout_height="20dp" />
 
             <Button
-                android:id="@+id/button11"
+                android:id="@+id/btnBuscar"
                 android:layout_width="252dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:onClick="cargarDatos"
                 android:text="Buscar"
                 android:textSize="18sp" />
 
@@ -78,6 +80,27 @@
                 android:layout_height="20dp" />
 
             <TextView
+                android:id="@+id/textView34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0F0F0"
+                android:text="Código"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/lblCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0F0F0"
+                android:text="-"
+                android:textSize="22sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp"
+                android:background="#F0F0F0" />
+
+            <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -86,16 +109,37 @@
                 android:textSize="22sp" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/lblNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F0F0F0"
-                android:text="Project - Básico"
+                android:text="-"
                 android:textSize="22sp" />
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="11dp"
+                android:background="#F0F0F0" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0F0F0"
+                android:text="Descripción"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/lblDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0F0F0"
+                android:text="-"
+                android:textSize="22sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
                 android:background="#F0F0F0" />
 
             <TextView
@@ -107,11 +151,32 @@
                 android:textSize="22sp" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/lblProfesor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F0F0F0"
-                android:text="GOMEZ SAENZ LUIS ADRIAN"
+                android:text="-"
+                android:textSize="22sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:background="#F0F0F0" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0F0F0"
+                android:text="Periodo"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/lblPeriodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0F0F0"
+                android:text="Bimestre 2 2019"
                 android:textSize="22sp" />
 
             <Space
@@ -128,11 +193,11 @@
                 android:textSize="22sp" />
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/lblHorario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F0F0F0"
-                android:text="M-V 17:00-19:50"
+                android:text="-"
                 android:textSize="22sp" />
 
             <Space
@@ -149,11 +214,11 @@
                 android:textSize="22sp" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/lblPrecio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F0F0F0"
-                android:text="$150"
+                android:text="-"
                 android:textSize="22sp" />
 
             <Space
@@ -172,24 +237,26 @@
                 android:layout_height="11dp" />
 
             <TableLayout
+                android:id="@+id/tabla_historial"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TableRow
+                    android:id="@+id/rowTitulo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView19"
-                        android:layout_width="54dp"
+                        android:layout_width="95dp"
                         android:layout_height="wrap_content"
-                        android:text="#"
+                        android:text="Cédula"
                         android:textSize="22sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView20"
-                        android:layout_width="209dp"
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:text="Tipo de oferta"
                         android:textSize="22sp"
@@ -197,7 +264,7 @@
 
                     <TextView
                         android:id="@+id/textView21"
-                        android:layout_width="141dp"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:text="Fecha"
                         android:textSize="22sp"
@@ -221,6 +288,55 @@
                 android:layout_height="wrap_content"
                 android:text="Interesados"
                 android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="13dp" />
+
+            <TableLayout
+                android:id="@+id/tabla_interesados"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:text="Correo"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="119dp"
+                        android:layout_height="wrap_content"
+                        android:text="Teléfono"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+            </TableLayout>
+
+            <include
+                layout="@layout/table_row_interesados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
