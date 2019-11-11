@@ -235,21 +235,22 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.856" />
 
-    <Button
-        android:id="@+id/btn_crear"
-        android:layout_width="197dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/button_style"
-        android:layout_gravity="center"
-        android:text="Crear Curso"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_passwordLogin"
-        app:layout_constraintVertical_bias="1.0" />
+        <Button
+            android:id="@+id/btn_crear"
+            android:layout_width="197dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/button_style"
+            android:text="Crear Curso"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_passwordLogin"
+            app:layout_constraintVertical_bias="1.0" />
 
     </LinearLayout>
 

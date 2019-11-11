@@ -1,0 +1,29 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rowTitulo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:text="Cédula"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Tipo de oferta"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+</TableRow>
