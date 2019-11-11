@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 if(!usuario.rol.equals("Invalido")){
-                    Intent intent = new Intent(MainActivity.this, ConsultarDatosGenerales.class);
+                    Intent intent = new Intent(MainActivity.this, ManejarCursos.class);
                     startActivity(intent);
                 }
 
