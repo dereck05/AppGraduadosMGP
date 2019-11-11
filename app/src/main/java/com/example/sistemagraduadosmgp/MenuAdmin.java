@@ -9,13 +9,13 @@ import android.widget.Button;
 
 public class MenuAdmin extends AppCompatActivity {
 
-    Button regLlamada = findViewById(R.id.regLlamadaAdmin);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_admin);
-
+        Button regLlamada = findViewById(R.id.regLlamadaAdmin);
         regLlamada.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
