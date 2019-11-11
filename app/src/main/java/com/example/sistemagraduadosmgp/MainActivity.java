@@ -111,5 +111,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void recuperarContrasena(View v) {
+        Intent intent = new Intent(MainActivity.this, RecuperarContrasena.class);
+        startActivity(intent);
+    }
+
 
 }

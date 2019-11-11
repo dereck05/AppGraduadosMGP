@@ -11,8 +11,8 @@
 
         <TextView
             android:id="@+id/lblReestablecer"
-            android:layout_width="364dp"
-            android:layout_height="129dp"
+            android:layout_width="362dp"
+            android:layout_height="222dp"
             android:layout_marginStart="23dp"
             android:layout_marginLeft="23dp"
             android:layout_marginEnd="24dp"
@@ -22,6 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteY="115dp" />
 
         <EditText
@@ -30,7 +31,7 @@
             android:layout_height="44dp"
             android:layout_marginStart="40dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="88dp"
             android:layout_marginEnd="40dp"
             android:layout_marginRight="40dp"
             android:ems="10"
@@ -43,8 +44,8 @@
 
         <Button
             android:id="@+id/btnEnviarCorreo"
-            android:layout_width="198dp"
-            android:layout_height="55dp"
+            android:layout_width="222dp"
+            android:layout_height="72dp"
             android:layout_marginStart="106dp"
             android:layout_marginLeft="106dp"
             android:layout_marginTop="72dp"
@@ -57,6 +58,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtReestablecer" />
+            app:layout_constraintTop_toBottomOf="@+id/txtReestablecer"
+            app:layout_constraintVertical_bias="0.739" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
